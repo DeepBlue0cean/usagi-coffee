@@ -5,6 +5,10 @@ const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 let currentSlide = 0;
 let timer;
 
+function updateHeader() {
+  nav.classList.toggle('solid', window.scrollY > 24);
+}
+
 function showSlide(index) {
   currentSlide = (index + slides.length) % slides.length;
   slides.forEach((slide, i) => {
@@ -44,6 +48,8 @@ document.addEventListener('visibilitychange', () => {
   if (document.hidden) window.clearInterval(timer);
   else startAutoplay();
 });
+window.addEventListener('scroll', updateHeader, { passive: true });
 
 showSlide(0);
 startAutoplay();
+updateHeader();
