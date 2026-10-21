@@ -4,18 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>USAGI Coffee — Good coffee fits into your day</title>
-<meta name="description" content="USAGI Coffee: cà phê Robusta & Arabica Lâm Đồng. Những điều nhỏ bé làm nên một tách cà phê ngon hơn.">
+<meta name="description" content="USAGI Coffee: cà phê Robusta và Arabica Lâm Đồng. Những điều nhỏ bé làm nên một tách cà phê ngon hơn.">
 <meta property="og:title" content="USAGI Coffee">
 <meta property="og:description" content="Small details make a better cup.">
-<meta property="og:image" content="img/robusta.jpg">
+<meta property="og:image" content="asset/Robusta.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="progress" id="progress"></div>
-
 <header class="nav" id="nav">
-  <a href="#product" class="brand"><img src="img/logo.jpg" alt="USAGI"></a>
-  <nav>
+  <a href="#product" class="brand" aria-label="USAGI Coffee — đầu trang">
+    <img src="asset/logo%20usagi.png" alt="USAGI Coffee & Tea" width="358" height="490">
+  </a>
+  <nav aria-label="Điều hướng chính">
     <a href="#product">Product</a>
     <a href="#about">About</a>
     <a href="#journal">Journal</a>
@@ -23,78 +23,43 @@
   </nav>
 </header>
 
-<section class="hero" id="product">
-  <div class="slides" id="slides">
-    <figure class="slide active" data-title="ROBUSTA"><img src="img/robusta.jpg" alt="USAGI Robusta"></figure>
-    <figure class="slide" data-title="ARABICA"><img src="img/arabica.jpg" alt="USAGI Arabica"></figure>
-    <figure class="slide" data-title="COFFEE FILTER"><img src="img/filter.jpg" alt="USAGI Coffee Filter"></figure>
-  </div>
-  <button class="arrow prev" aria-label="Trước">‹</button>
-  <button class="arrow next" aria-label="Sau">›</button>
-  <div class="hero-text">
-    <h1 id="heroTitle">ROBUSTA</h1>
-    <a href="#contact" class="btn">Đặt mua ngay</a>
-  </div>
-  <div class="dots" id="dots"></div>
-  <span class="scroll-hint">Scroll</span>
-</section>
+<main>
+  <section class="hero" id="product" tabindex="-1" aria-label="Sản phẩm USAGI">
+    <div class="slides" id="slides" aria-live="polite">
+      <figure class="slide active" data-title="USAGI Robusta">
+        <img src="asset/Robusta.png" alt="Gói cà phê Robusta USAGI cùng những hạt cà phê rang." width="1920" height="1080">
+      </figure>
+      <figure class="slide" data-title="USAGI Arabica">
+        <img src="asset/Arabica.png" alt="Gói cà phê Arabica USAGI cùng những hạt cà phê rang." width="1920" height="1080">
+      </figure>
+    </div>
+    <button class="arrow prev" type="button" aria-label="Xem sản phẩm trước">
+      <img src="asset/L%20button.png" alt="" width="60" height="60">
+    </button>
+    <button class="arrow next" type="button" aria-label="Xem sản phẩm tiếp theo">
+      <img src="asset/R%20button.png" alt="" width="60" height="60">
+    </button>
+    <h1 class="sr-only" id="heroTitle">USAGI Robusta</h1>
+  </section>
 
-<section class="story" id="about">
-  <div class="story-text reveal">
-    <h2>CÂU CHUYỆN USAGI</h2>
-    <p class="en">We believe in simple things.</p>
-    <p>Chúng tôi không nghĩ ai cũng cần USAGI.</p>
-    <p>USAGI là con thỏ trong tiếng Nhật. Nhỏ, lặng, và nghe thấy mọi thứ.</p>
-    <p>Chúng tôi đến từ Lâm Đồng. Rang từng mẻ nhỏ, không thêm gì vào.</p>
-  </div>
-  <div class="story-img reveal"><img src="img/story.jpg" alt="USAGI Robusta trên bàn gỗ"></div>
-</section>
+  <section class="art-section story" id="about" tabindex="-1" aria-labelledby="about-title">
+    <h2 class="sr-only" id="about-title">Câu chuyện USAGI</h2>
+    <img src="asset/Story.png" alt="Câu chuyện USAGI: cà phê từ Lâm Đồng, rang từng mẻ nhỏ, không thêm gì vào; một tách cà phê dành cho những phút giây chậm lại." width="1920" height="1006" loading="lazy">
+  </section>
 
-<section class="details" id="journal">
-  <div class="row intro">
-    <div class="reveal left"><h2>SMALL DETAILS<br>MAKE A BETTER CUP.</h2><p>Một vài chi tiết nhỏ để bạn thưởng thức cà phê ngon hơn.</p></div>
-    <div class="img reveal"><img src="img/intro.jpg" alt="Phin cà phê"></div>
-  </div>
+  <section class="art-section journal" id="journal" tabindex="-1" aria-labelledby="journal-title">
+    <h2 class="sr-only" id="journal-title">Small details make a better cup</h2>
+    <img src="asset/journal.png" alt="Năm bước pha cà phê đá USAGI: cho đá, rót cà phê, thêm sữa đặc, thêm nước hoặc sữa và tìm tỉ lệ phù hợp." width="1920" height="4583" loading="lazy">
+  </section>
 
-  <div class="row">
-    <div class="step reveal left"><span class="num">01</span><h3>ICE FIRST</h3><small>START WITH ICE.</small><p>Cho đá vào ly trước để giữ cà phê mát lạnh và cân bằng vị.</p></div>
-    <div class="img reveal"><img src="img/s1.jpg" alt="Đá"></div>
-  </div>
-  <div class="row flip">
-    <div class="img reveal"><img src="img/s2.jpg" alt="Rót cà phê"></div>
-    <div class="step reveal right"><span class="num">02</span><h3>POUR SLOWLY</h3><small>LET THE FLAVOR UNFOLD.</small><p>Rót cà phê từ từ để hương vị lan tỏa đều, giữ được độ thơm và hậu vị.</p></div>
-  </div>
-  <div class="row">
-    <div class="step reveal left"><span class="num">03</span><h3>ADD CONDENSED MILK</h3><small>MAKE IT YOUR WAY.</small><p>Thêm sữa đặc theo khẩu vị để có ly cà phê đậm đà kiểu Sài Gòn.</p></div>
-    <div class="img reveal"><img src="img/s3.jpg" alt="Sữa đặc"></div>
-  </div>
-  <div class="row flip">
-    <div class="img reveal"><img src="img/s4.jpg" alt="Thêm sữa"></div>
-    <div class="step reveal right"><span class="num">04</span><h3>ADD WATER OR MILK</h3><small>MAKE IT YOUR WAY.</small><p>Thêm nước lạnh hoặc sữa tươi để có ly cà phê đúng gu của bạn.</p></div>
-  </div>
-</section>
+  <section class="art-section contact" id="contact" tabindex="-1" aria-labelledby="contact-title">
+    <h2 class="sr-only" id="contact-title">Good coffee fits into your day</h2>
+    <img src="asset/contact.png" alt="Liên hệ USAGI Coffee: 0938.512.599 hoặc facebook.com/Usagicoffeetea." width="1912" height="639" loading="lazy">
+    <a class="contact-link phone" href="tel:+84938512599" aria-label="Gọi USAGI Coffee qua số 0938 512 599"></a>
+    <a class="contact-link facebook" href="https://facebook.com/Usagicoffeetea" aria-label="USAGI Coffee trên Facebook"></a>
+  </section>
+</main>
 
-<section class="balance">
-  <span class="num reveal">05</span>
-  <h3 class="reveal">FIND YOUR BALANCE</h3>
-  <small class="reveal">SAME COFFEE, DIFFERENT MOODS.</small>
-  <div class="glasses">
-    <figure class="reveal"><img src="img/g1.jpg" alt=""><figcaption>Đậm nguyên bản</figcaption></figure>
-    <figure class="reveal"><img src="img/g2.jpg" alt=""><figcaption>Sài Gòn đậm đà</figcaption></figure>
-    <figure class="reveal"><img src="img/g3.jpg" alt=""><figcaption>Êm mượt</figcaption></figure>
-    <figure class="reveal"><img src="img/g4.jpg" alt=""><figcaption>Thanh nhẹ</figcaption></figure>
-  </div>
-</section>
-
-<section class="closing" id="contact">
-  <div class="parallax" id="parallax"></div>
-  <div class="closing-inner reveal">
-    <p>GOOD COFFEE<br>FITS INTO YOUR DAY.</p>
-    <a class="btn light" href="mailto:hello@usagicoffee.vn">Liên hệ đặt hàng</a>
-  </div>
-</section>
-
-<footer>© 2026 USAGI Coffee · Lâm Đồng, Việt Nam</footer>
 <script src="script.js"></script>
 </body>
 </html>

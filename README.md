@@ -6,19 +6,18 @@ Landing page tĩnh cho thương hiệu cà phê **USAGI** (Robusta & Arabica Lâ
 
 ## Tính năng
 
-- Hero slider (Robusta / Arabica / Coffee Filter), tự chuyển và có điều hướng
-- Hiệu ứng reveal khi cuộn, thanh tiến trình, parallax, menu đổi nền khi cuộn
+- Hero slider Robusta / Arabica, tự chuyển và có điều hướng
+- Header cố định; các mục điều hướng cuộn tới và focus đúng nội dung
 - Responsive, hỗ trợ `prefers-reduced-motion`
 - Không dùng framework, không cần build
 
 ## Cấu trúc
 
 ```
-index.html   # nội dung trang
-style.css    # giao diện & hiệu ứng
-script.js    # slider, reveal, parallax
-img/         # ảnh đã cắt từ thiết kế
-asset/       # ảnh thiết kế gốc
+index.html   # nội dung và điều hướng trang
+style.css    # giao diện responsive
+script.js    # slider và focus điều hướng
+asset/       # toàn bộ ảnh được trang sử dụng
 ```
 
 ## Chạy local
@@ -35,5 +34,5 @@ Settings → Pages → Source: **Deploy from a branch** → `main` / `/ (root)`.
 
 ## Tuỳ chỉnh
 
-- Đổi link liên hệ trong nút "Liên hệ đặt hàng" ở `index.html` (hiện là email mẫu `hello@usagicoffee.vn`).
-- Thay ảnh trong `img/` bằng ảnh PNG/WebP chất lượng cao khi có.
+- Cập nhật số điện thoại và liên kết Facebook trong `index.html` khi thông tin liên hệ thay đổi.
+- Thay ảnh trong `asset/` khi cập nhật thiết kế.
