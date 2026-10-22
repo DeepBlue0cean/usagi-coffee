@@ -6,8 +6,9 @@ Landing page tĩnh cho thương hiệu cà phê **USAGI** (Robusta & Arabica Lâ
 
 ## Tính năng
 
-- Hero slider Robusta / Arabica, tự chuyển và có điều hướng
+- Hero slider gồm Arabica và Robusta ghép từ component PNG (variant2, variant1), cùng phin cà phê kim loại từ variant3; chữ, túi, hạt và nút điều hướng là các lớp riêng, không dùng ảnh thiết kế phẳng; hạt cà phê zoom in trước khi sản phẩm xuất hiện bằng CSS thuần
 - Header cố định; các mục điều hướng cuộn tới và focus đúng nội dung
+- Journal bung thành từng lớp khi cuộn tới
 - Responsive, hỗ trợ `prefers-reduced-motion`
 - Không dùng framework, không cần build
 
@@ -16,8 +17,8 @@ Landing page tĩnh cho thương hiệu cà phê **USAGI** (Robusta & Arabica Lâ
 ```
 index.html   # nội dung và điều hướng trang
 style.css    # giao diện responsive
-script.js    # slider và focus điều hướng
-asset/       # toàn bộ ảnh được trang sử dụng
+script.js    # slider, focus điều hướng và trạng thái hero trong viewport
+asset/       # ảnh nội dung ở frame2/; component sản phẩm trong frame1/variant1/, variant2/ và variant3/
 ```
 
 ## Chạy local
