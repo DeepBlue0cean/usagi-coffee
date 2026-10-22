@@ -495,28 +495,49 @@ main {
   pointer-events: none;
 }
 
+/* Mỗi mảnh là một vùng chữ hoặc ảnh của journal.png, hiện độc lập khi cuộn tới hàng của nó */
 .journal-panel {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: fill;
-  clip-path: inset(var(--panel-top) 0 var(--panel-bottom));
+  clip-path: inset(var(--cut-top) var(--cut-right) var(--cut-bottom) var(--cut-left));
   opacity: 0;
-  transform: translate3d(calc((var(--panel-index) - 2) * 30px), 38px, 0) scale(.99);
+  transform-origin: var(--ox) var(--oy);
+  transform: translate3d(var(--tx, 0), var(--ty, 0), 0) scale(var(--s, 1));
+  filter: blur(var(--blur, 0));
   transition:
-    opacity .65s ease,
-    transform .85s cubic-bezier(.2, .7, .2, 1);
-  transition-delay: calc(var(--panel-index) * 90ms);
+    opacity .7s ease var(--delay, 0ms),
+    filter .8s ease var(--delay, 0ms),
+    transform 1.1s cubic-bezier(.22, 1, .36, 1) var(--delay, 0ms);
 }
 
-.journal.reveal-ready:not(.is-visible) .journal-panel {
-  transition-delay: 0ms;
+.journal-panel.is-text {
+  --s: .72;
+  --blur: 8px;
+  transition-timing-function: ease, ease, cubic-bezier(.34, 1.56, .64, 1);
 }
 
-.journal.reveal-ready.is-visible .journal-panel {
+.journal-panel.from-right {
+  --tx: 9vw;
+  --s: 1.12;
+}
+
+.journal-panel.from-left {
+  --tx: -9vw;
+  --s: 1.12;
+}
+
+.journal-panel.from-below {
+  --ty: 7vw;
+  --s: .88;
+}
+
+.journal-panel.is-in {
   opacity: 1;
-  transform: translate3d(0, 0, 0) scale(1);
+  filter: none;
+  transform: none;
 }
 
 .contact {
@@ -736,6 +757,7 @@ main {
 
   .journal-panel {
     opacity: 1;
+    filter: none;
     transform: none;
     transition: none;
   }
